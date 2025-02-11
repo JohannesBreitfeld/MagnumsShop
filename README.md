@@ -1,0 +1,2 @@
+# MagnumsShop
+ First assignment Webbutveckling
