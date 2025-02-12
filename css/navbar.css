@@ -1,0 +1,21 @@
+.navbar-custom {
+    background-image: linear-gradient(to top, #4bb35c, #3d6829);
+  };
+
+  .nav-pills .nav-link {
+    color: #ffffff;
+  }
+
+  .nav-pills .nav-link:hover {
+    color: #ffffff; 
+    background-color: #c0392b ;
+  }
+  
+  .nav-pills .nav-link.active  {
+    background-color: #c0392b;
+
+    color: white; 
+  }
+  
+  
+
