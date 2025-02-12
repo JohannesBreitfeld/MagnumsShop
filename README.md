@@ -1,2 +1,4 @@
 # MagnumsShop
- First assignment Webbutveckling
+[https://johannesbreitfeld.github.io/MagnumsShop/](https://johannesbreitfeld.github.io/MagnumsShop/)
+   
+   First assignment Webbutveckling
