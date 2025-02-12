@@ -1,0 +1,11 @@
+.footer-custom {
+    min-height: 100;
+    background-color: rgb(2, 71, 131);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-custom-text {
+    color: #f5870a
+    
+}
