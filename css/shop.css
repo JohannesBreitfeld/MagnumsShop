@@ -1,0 +1,13 @@
+.card-img-top{
+    width: 300px;
+}
+
+.card-body {
+    background-color: rgb(2, 71, 131);
+}
+
+.card-custom{
+    width: 300px;
+    border-style: none;
+    margin: 10px;
+}
