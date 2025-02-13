@@ -7,3 +7,29 @@
 #card-president{
   background-image: linear-gradient(135deg, #3d6829, #4bb35c);
 }
+
+#top-container {
+  width : 100%;
+  min-height: 500px;
+  background-image: url('../img/forest.avif'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  #top-container {
+      background-image: url('../img/forest-medium.avif');
+  }
+}
+
+
+@media (max-width: 768px) {
+  #top-container {
+      background-image: url('../img/forest-small.avif');
+  }
+}
