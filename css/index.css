@@ -1,0 +1,9 @@
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+#card-president{
+  background-image: linear-gradient(135deg, #3d6829, #4bb35c);
+}

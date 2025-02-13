@@ -5,7 +5,7 @@ html, body {
 }
 
 .body-custom {
-    background-color: #278be7;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -13,16 +13,20 @@ html, body {
 
 .main {
     flex: 1;
+    
 }
 
 .top-container {
-    background-image: url('../img/forest.avif');
+    width : 100%;
+    min-height: 500px;
+    background-image: url('../img/forest.avif'); 
     background-size: cover;
     background-position: center;
-    min-height: 400px; 
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
 }
+
+
