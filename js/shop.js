@@ -61,10 +61,8 @@ for (i = 0; i < shopItems.length; i++) {
 
 function createCard(shopItem) {
     const col = document.createElement("div");
-    col.classList.add("col");
-    col.classList.add("col-mt-3");
-
-
+    col.classList.add("col", "col-mt-3", "col-12", "col-md-6", "col-lg-4");
+    
     const card = document.createElement("div");
     card.classList.add("card", "card-custom", "mx-auto");
    
