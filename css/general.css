@@ -53,10 +53,12 @@ html, body {
     background-color: rgb(2, 71, 131);
     text-align: center;
     padding: 10px;
+    min-height: 300px;
 }
 
 .footer-custom-text {
-    color: #ffa743  
+    color: #ffa743;
+    overflow: hidden;  
 }
 
 .footer-logo {

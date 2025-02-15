@@ -5,7 +5,7 @@ const shopItems = [
 {
     name:"Stihl MS 500i W",
     price: 20699,
-    swordlength: "20 tum",
+    swordLength: "20 tum",
     cylinderSize: "79.2 cm³",
     output: "5 kW",
     weight: "6.3 kg",
@@ -15,7 +15,7 @@ const shopItems = [
 {
     name: "Stihl MS 661 C-M W",
     price: 20599,
-    swordlength: "28 tum",
+    swordLength: "28 tum",
     cylinderSize: "91.1 cm³",
     output: "5.4 kW",
     weight: "7.5 kg",
@@ -25,7 +25,7 @@ const shopItems = [
 {
     name: "Husqvarna 592 XPG",
     price: 18999,
-    swordlength: "28 tum",
+    swordLength: "28 tum",
     cylinderSize: "92.7 cm³",
     output: "5.6 kW",
     weight: "7.6 kg",
@@ -57,6 +57,7 @@ const items = document.getElementById("shop-items");
 
 for (i = 0; i < shopItems.length; i++) {
     createCard(shopItems[i]);
+    createModal(shopItems[i]);
   }
 
 function createCard(shopItem) {
@@ -65,13 +66,12 @@ function createCard(shopItem) {
     
     const card = document.createElement("div");
     card.classList.add("card", "card-custom", "mx-auto");
-   
   
     const cardImg = document.createElement("img");
     cardImg.setAttribute("loading", "lazy");
     cardImg.classList.add("card-img-top");
     cardImg.src = shopItem.itemURL;
-    cardImg.alt = `${shopItem.name}`;
+    cardImg.alt = shopItem.name;
   
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
@@ -84,18 +84,16 @@ function createCard(shopItem) {
     cardPrice.innerText = `${shopItem.price} SEK`;
     cardBody.appendChild(cardPrice);
   
-
-  
     const addToCartBtn = document.createElement("button"); 
-    addToCartBtn.classList.add("btn", "btn-warning");
-    addToCartBtn.textContent = "Köp";
+    addToCartBtn.classList.add("btn", "btn-success");
+    addToCartBtn.textContent = "Lägg i varukorg";
     cardBody.appendChild(addToCartBtn);
 
     const readMoreBtn = document.createElement("button");
-    readMoreBtn.classList.add("btn", "btn-success");
+    readMoreBtn.classList.add("btn", "btn-warning");
     readMoreBtn.classList.add("m-2");
     readMoreBtn.setAttribute("data-bs-toggle", "modal");
-    readMoreBtn.setAttribute("data-bs-target", "#" + shopItem.modalTag);
+    readMoreBtn.setAttribute("data-bs-target", "#" + `modal-${shopItem.name.replace(/\s+/g, '-').toLowerCase()}`);
     readMoreBtn.textContent = "Mer info";
     cardBody.appendChild(readMoreBtn);
   
@@ -110,4 +108,114 @@ function createCard(shopItem) {
   
     items.appendChild(col);
   }
+
+
+function createModal(item) {
+  const modal = document.createElement("div");
+  modal.id = `modal-${item.name.replace(/\s+/g, '-').toLowerCase()}`
+  modal.classList.add("modal", "fade");
+
+  const modalDialog = document.createElement("div");
+  modalDialog.classList.add("modal-dialog", "modal-dialog-centered");
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+
+  const modalHeader = document.createElement("div");
+  modalHeader.classList.add("modal-header");
+
+  const modalTitle = document.createElement("h1");
+  modalTitle.classList.add("modal-title");
+  modalTitle.textContent = item.name;
+
+  const closeButton = document.createElement("button");
+  closeButton.setAttribute("type", "button");
+  closeButton.classList.add("btn-close");
+  closeButton.setAttribute("data-bs-dismiss", "modal");
+  closeButton.setAttribute("aria-label", "Close");
+
+  modalHeader.appendChild(modalTitle);
+  modalHeader.appendChild(closeButton);
+
+  const modalBody = document.createElement("div");
+  modalBody.classList.add("modal-body");
+
+  const grid = document.createElement("div");
+  grid.classList.add("modal-grid");
+  
+  const img = document.createElement("img");
+  img.setAttribute("loading", "lazy");
+  img.classList.add("mx-auto", "d-block", "rounded");
+  img.src = item.itemURL;
+  
+  grid.appendChild(img);
+  
+  const description = document.createElement("p");
+  description.classList.add("p-3")
+  description.innerText = item.description;
+  
+  grid.appendChild(description);
+  
+  const info = document.createElement("ul");
+
+  const swordLengthLi = document.createElement("li");
+  swordLengthLi.textContent = `Svärdslängd: ${item.swordLength}`;
+  info.appendChild(swordLengthLi);
+
+  const cylinderSizeLi = document.createElement("li");
+  cylinderSizeLi.textContent = `Cylinderstorlek: ${item.cylinderSize}`;
+  info.appendChild(cylinderSizeLi);
+
+  const outputLi = document.createElement("li");
+  outputLi.textContent = `Effekt: ${item.output}`;
+  info.appendChild(outputLi);
+
+  const weightLi = document.createElement("li");
+  weightLi.textContent = `Vikt: ${item.weight}`;
+  info.appendChild(weightLi);
+  
+  grid.appendChild(info);
+  
+  const price = document.createElement("h2");
+  price.classList.add("m-3");
+  price.textContent = `${item.price} SEK`;
+  
+  grid.appendChild(price);
+  modalBody.appendChild(grid);
+
+  const modalFooter = document.createElement("div");
+  modalFooter.classList.add("modal-footer", "d-flex", "justify-content-between");
+
+  
+  const addToCartBtn = document.createElement("button");
+  addToCartBtn.setAttribute("type", "button");
+  addToCartBtn.classList.add("btn", "btn-success");
+  addToCartBtn.textContent = "Lägg i varukorg";
+  addToCartBtn.setAttribute("data-bs-dismiss", "modal");
+  
+  addToCartBtn.onclick = function () {
+    addToCart(item);
+  };
+  
+  
+
+  const goBackButton = document.createElement("button");
+  goBackButton.setAttribute("type", "button");
+  goBackButton.classList.add("btn", "btn-danger");
+  goBackButton.setAttribute("data-bs-dismiss", "modal");
+  goBackButton.textContent = "Stäng";
+  
+  modalFooter.appendChild(goBackButton);
+  modalFooter.appendChild(addToCartBtn);
+  modalContent.appendChild(modalHeader);
+  modalContent.appendChild(modalBody);
+  modalContent.appendChild(modalFooter);
+
+  modalDialog.appendChild(modalContent);
+
+  modal.appendChild(modalDialog);
+
+  document.body.appendChild(modal);
+}
+
 })
