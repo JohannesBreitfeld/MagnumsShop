@@ -12,3 +12,11 @@
     border-style: none;
     margin: 10px;
 }
+
+#shop-items{
+    min-height: 800px;
+}
+
+.modal-content {
+    background-color: rgb(2, 71, 131);;
+}
