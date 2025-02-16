@@ -66,4 +66,11 @@ html, body {
     height: 40px;
 }
 
+#cartOffCanvas {
+  background-color: rgb(2, 71, 131);
+}
 
+
+#cartItems{
+  list-style-type: none;
+}

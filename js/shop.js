@@ -197,8 +197,6 @@ function createModal(item) {
     addToCart(item);
   };
   
-  
-
   const goBackButton = document.createElement("button");
   goBackButton.setAttribute("type", "button");
   goBackButton.classList.add("btn", "btn-danger");
