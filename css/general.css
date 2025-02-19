@@ -11,12 +11,6 @@ html, body {
     min-height: 100vh;
 }
 
-.main-about {
-    flex: 1;
-    overflow-x: hidden;
-    
-}
-
 .main{
     flex: 1;
 }
@@ -25,35 +19,38 @@ html, body {
     background-color: #1c92c0d8;
 }
 
-.navbar-custom {
-    background-image: linear-gradient(to top, #4bb35c, #3d6829);
-  };
+.navbar-custom 
+{
+  background-image: linear-gradient(to top, #4bb35c, #3d6829);
+};
 
-  .nav-pills .nav-link {
-    color: #ffffff;
-  }
+.nav-pills .nav-link 
+{
+  color: #ffffff;
+}
 
-  .nav-pills .nav-link:hover {
-    background-color: #c0392b ;
-  }
+.nav-pills .nav-link:hover 
+{
+  background-color: #c0392b ;
+
+} 
   
-  .nav-pills .nav-link.active  {
-    background-color: #c0392b;
-    color: white; 
-    font-weight: bold;
-  }
+.nav-underline .nav-link.active{
+  border-bottom-color: red !important;
+}
 
-  .navbar .navbar-brand {
-    height: 40px;
-    width: 300px;
-  }
+
+.navbar .navbar-brand 
+{
+  height: 40px;
+  width: 300px;
+}
   
-  .footer-custom {
-   
-    background-color: rgb(2, 71, 131);
-    text-align: center;
-    padding: 10px;
-    min-height: 300px;
+.footer-custom {
+  background-color: rgb(2, 71, 131);
+  text-align: center;
+  padding: 10px;
+  min-height: 300px;
 }
 
 .footer-custom-text {
@@ -80,3 +77,13 @@ html, body {
     background-color: rgba(255, 255, 255, 0.1); 
 }
 
+#cartCount {
+  min-width: 35px; 
+  min-height: 25px;
+  display: inline-block; 
+  visibility: hidden; 
+}
+
+#cartCount.show {
+  visibility: visible; 
+}

@@ -68,7 +68,16 @@ function removeFromCart(index) {
       const count = shoppingCart.reduce((total, item) => total + item.quantity, 0); 
       cartCount.textContent = count;
     
-      cartCount.style.display = count > 0 ? "inline-block" : "none";
+      if (count > 0) 
+      {
+        cartCount.textContent = count;
+        cartCount.classList.add("show");
+      } 
+      else 
+      {
+        cartCount.textContent = "";
+        cartCount.classList.remove("show");
+      }
     }
 
     function openCart() {
