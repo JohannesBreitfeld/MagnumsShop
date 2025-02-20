@@ -15,10 +15,6 @@ html, body {
     flex: 1;
 }
 
-#about-maps{
-    background-color: #1c92c0d8;
-}
-
 .navbar-custom 
 {
   background-image: linear-gradient(to top, #4bb35c, #3d6829);
@@ -38,7 +34,6 @@ html, body {
 .nav-underline .nav-link.active{
   border-bottom-color: red !important;
 }
-
 
 .navbar .navbar-brand 
 {
