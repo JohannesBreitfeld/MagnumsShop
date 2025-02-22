@@ -1,11 +1,45 @@
 #about-maps{
-    background-color: #1c92c0d8;
+    background-color: #3a5a40
+}
+
+#staff-container{
+    background-color: #a3b18a;
+}
+
+.card {
+    color: #dad7cd;
+    background-color: #3a5a40;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 #staff-container h1{
  text-align: center;
+ color: #344e41;;
+
 }
 
 #motorsag-pic {
     overflow: hidden;
 }
+
+.row-history{
+    background-color:#3a5a40;
+    color:#dad7cd;
+}
+
+a[href^="mailto:"] {
+    color: #dad7cd;
+    text-decoration: none; 
+}
+
+a[href^="mailto:"]:hover {
+    color: #ffffff;
+    text-decoration: underline; 
+}
+
+/* #dad7cd
+#a3b18a
+#588157
+#3a5a40
+#344e41 */
+

@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             row.appendChild(col);
             
             const card = document.createElement("div");
-            card.classList.add("card", "mx-auto", "bg-white", "text-black", "m-4");
-            card.style.width = "18rem";
+            card.classList.add("card", "mx-auto", "m-4");
+            card.style.width = "20rem";
             card.innerHTML = 
             `<img src="${element.picture.medium}" class="card-img-top rounded-circle p-3" alt="Profile Picture">
             <div class="card-body">
