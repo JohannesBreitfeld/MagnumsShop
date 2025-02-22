@@ -5,3 +5,7 @@
 #staff-container h1{
  text-align: center;
 }
+
+#motorsag-pic {
+    overflow: hidden;
+}
