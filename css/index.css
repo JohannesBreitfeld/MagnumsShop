@@ -1,5 +1,11 @@
+#welcome h1{
+  text-align: center;
+  margin: 25px;
+}
+
 #card-president {
-  background-image: linear-gradient(135deg, #3d6829, #4bb35c);
+  background-color: #588157;
+  color: #dad7cd;
 }
 
 #top-container {
@@ -17,7 +23,7 @@
 @media (max-width: 480px) {
   #top-container {
     background-image: none;
-    background-color: rgb(2, 71, 131);
+    background-color: #a3b18a;
   }
 }
 

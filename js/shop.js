@@ -85,12 +85,12 @@ function createCard(shopItem) {
     cardBody.appendChild(cardPrice);
   
     const addToCartBtn = document.createElement("button"); 
-    addToCartBtn.classList.add("btn", "btn-success");
+    addToCartBtn.classList.add("btn", "btn-card");
     addToCartBtn.textContent = "Lägg i varukorg";
     cardBody.appendChild(addToCartBtn);
 
     const readMoreBtn = document.createElement("button");
-    readMoreBtn.classList.add("btn", "btn-warning");
+    readMoreBtn.classList.add("btn", "btn-card");
     readMoreBtn.classList.add("m-2");
     readMoreBtn.setAttribute("data-bs-toggle", "modal");
     readMoreBtn.setAttribute("data-bs-target", "#" + `modal-${shopItem.name.replace(/\s+/g, '-').toLowerCase()}`);
@@ -199,7 +199,7 @@ function createModal(item) {
   
   const goBackButton = document.createElement("button");
   goBackButton.setAttribute("type", "button");
-  goBackButton.classList.add("btn", "btn-danger");
+  goBackButton.classList.add("btn");
   goBackButton.setAttribute("data-bs-dismiss", "modal");
   goBackButton.textContent = "Stäng";
   

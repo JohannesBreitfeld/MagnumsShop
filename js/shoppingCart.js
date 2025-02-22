@@ -122,8 +122,8 @@ function removeFromCart(index) {
               <div class="d-flex flex-column align-items-center">
                 <span class="fw-bold">${item.quantity}</span>
                   <div class="d-flex gap-2 mt-1">
-                      <button class="btn btn-sm btn-success" onclick="increaseQuantity(${index})">+</button>
-                      <button class="btn btn-sm btn-danger" onclick="decreaseQuantity(${index})">-</button>
+                      <button class="btn btn-sm btn-cart" onclick="increaseQuantity(${index})">+</button>
+                      <button class="btn btn-sm btn-cart" onclick="decreaseQuantity(${index})">-</button>
                   </div>
               </div>
             </td>

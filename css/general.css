@@ -5,10 +5,11 @@ html, body {
 }
 
 .body-custom {
-    background-color: #ffffff;
+    background-color: #a3b18a;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Oswald', sans-serif;
 }
 
 .main{
@@ -17,22 +18,31 @@ html, body {
 
 .navbar-custom 
 {
-  background-image: linear-gradient(to top, #4bb35c, #3d6829);
+  background-color: #a3b18a;
 };
 
-.nav-pills .nav-link 
-{
-  color: #ffffff;
+.nav-underline{
+  color:#dad7cd;
 }
 
-.nav-pills .nav-link:hover 
+.nav-underline .nav-link 
 {
-  background-color: #c0392b ;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
 
-} 
-  
-.nav-underline .nav-link.active{
-  border-bottom-color: red !important;
+}
+
+.nav-underline .nav-link.active 
+{
+  font-weight: normal;
+}
+
+.nav-underline .nav-link:hover{
+  border-bottom-color: #344e41 ;
+}
+
+.nav-underline .nav-link.active:hover{
+  border-bottom-color: #ffffff ;
 }
 
 .navbar .navbar-brand 
@@ -42,14 +52,14 @@ html, body {
 }
   
 .footer-custom {
-  background-color: rgb(2, 71, 131);
+  background-color: #344e41;
   text-align: center;
   padding: 10px;
   min-height: 300px;
 }
 
 .footer-custom-text {
-    color: #ffa743;
+    color: #dad7cd;
     overflow: hidden;  
 }
 
@@ -59,17 +69,22 @@ html, body {
 }
 
 #cartOffCanvas {
-  background-color: rgb(2, 71, 131);
+  background-color: #a3b18a
 }
 
+.offcanvas-header{
+  background-color: #344e41;
+}
 
 .cart-table{
-  border-color: rgb(2, 71, 131);
+  border-color: #a3b18a
 }
 
-.cart-table td, 
+.cart-table td{
+  background-color: #588157;
+}
 .cart-table th {
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color:#a3b18a; 
 }
 
 #cartCount {
@@ -82,3 +97,18 @@ html, body {
 #cartCount.show {
   visibility: visible; 
 }
+
+.btn-cart{
+  background-color: #344e41;
+}
+
+.btn-cart:hover{
+  background-color:#3a5a40;
+}
+
+
+/* #dad7cd
+#a3b18a
+#588157
+#3a5a40
+#344e41 */
