@@ -8,9 +8,11 @@
 }
 
 .card-custom{
-    width: 300px;
-    border-style: none;
-    margin: 10px;
+    width: 302px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 25px;
+    border-color: #344e41;
 }
 
 #shop-items{
@@ -18,5 +20,27 @@
 }
 
 .modal-content {
-    background-color: rgb(2, 71, 131);;
+    background-color: #344e41;
 }
+
+.btn-card{
+    background-color: #344e41;
+}
+
+.btn-card:hover{
+    background-color: #3a5a40;
+}
+
+.main h1{
+    text-align: center;
+    color: #344e41;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+/* #dad7cd
+#a3b18a
+#588157
+#3a5a40
+#344e41 */
+
