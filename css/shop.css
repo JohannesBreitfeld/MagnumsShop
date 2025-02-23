@@ -4,7 +4,7 @@
 }
 
 .card-body {
-    background-color: rgb(2, 71, 131);
+    background-color: #588157;
 }
 
 .card-custom{
@@ -17,6 +17,7 @@
 
 #shop-items{
     min-height: 800px;
+    background-color: #a3b18a;
 }
 
 .modal-content {
