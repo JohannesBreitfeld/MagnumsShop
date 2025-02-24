@@ -22,7 +22,7 @@
   <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
     <div class="container-fluid">
       <a class="navbar-brand m-3" href="index.html">
-        <img src="img/magnum.avif" alt="Magnum AB" />
+        <img src="img/magnum.avif" alt="Magnum AB" class="footer-logo" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
   </div>
 
   <div id="top-container">
-    <h2><img src="img/magnum.avif" alt="Magnum AB"></h2>
+    <h2><img src="img/magnum.avif" alt="Magnum AB" class="footer-logo"></h2>
   </div>
   <div class="main">
     <div class="container">
@@ -67,7 +67,10 @@
           <div class="card m-5 border-0">
             <div class="row g-0" id="card-president">
               <div class="col-md-4">
-                <img src="img/tomselleck2.avif" class="img-fluid rounded-start" alt="...">
+                <picture>
+                <source srcset="img/tomselleck2.avif" media="(min-width: 481px)"class="img-fluid rounded-start" id="img-president" alt="Tom selleck">
+                <img src="img/tomselleck-small.avif" class="img-fluid rounded-start" id="img-president" alt="Tom selleck">
+              </picture>
               </div>
               <div class="col-md-8">
                 <div class="card-body">
