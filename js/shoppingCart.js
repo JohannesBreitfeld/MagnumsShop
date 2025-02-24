@@ -91,6 +91,12 @@ function removeFromCart(index) {
     const cartList = document.getElementById("cartItems");
     cartList.innerHTML = "";
 
+    if (shoppingCart.length === 0)
+    {
+      cartList.innerHTML = "<p>Varukorgen är tom</p>";
+      return;
+    }
+
     const table = document.createElement("table");
     table.classList.add("table", "table-bordered", "cart-table");
 
