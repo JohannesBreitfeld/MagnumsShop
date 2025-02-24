@@ -16,6 +16,9 @@ The assignment was to create a simple webshop and was given with the following d
 - All products/services should be expandable in e.g., a modal for detailed information.
 - The webpage should achieve a Lighthouse score of at least 90% for both desktop and mobile.
 
+## API
+I have used the RandomUser.me open API to retrieve the name, phone number, and picture for the employee cards on the about page.
+
 ## Lighthouse scores
 ### Landing page (index.html)
 Desktop:
@@ -34,6 +37,3 @@ Desktop:
 ![](lighthouse/shopDesktop.bmp)
 Mobile:
 ![](lighthouse/shopMobile.bmp)
-
-## API
-I have used the RandomUser.me open API to retrieve the name, phone number, and picture for the employee cards on the about page.
