@@ -50,6 +50,12 @@ html, body {
   height: 40px;
   width: 300px;
 }
+
+@media (max-width: 480px){
+  .navbar-brand{
+    display: none;
+  }
+}
   
 .footer-custom {
   background-color: #344e41;
